@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷火电竞 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f2f4f7;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* hero 区域 */
+        .hero {
+            text-align: center;
+            padding: 3rem 1.5rem 2.5rem;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02);
+            margin-bottom: 2.2rem;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1a2634;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #5b6f83;
+            max-width: 580px;
+            margin: 0 auto;
+            font-weight: 380;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.2rem;
+        }
+
+        @media (min-width: 640px) {
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.02);
+            border: 1px solid #e6eaef;
+            transition: box-shadow 0.15s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.9rem;
+            color: #1a2634;
+            border-left: 4px solid #8a9aa8;
+            padding-left: 0.75rem;
+        }
+
+        .card p {
+            margin-bottom: 0.7rem;
+            font-size: 0.96rem;
+            color: #3f4e5e;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 0.4rem;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding: 0.25rem 0 0.25rem 1.5rem;
+            font-size: 0.96rem;
+            color: #3f4e5e;
+            line-height: 1.5;
+        }
+
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.3rem;
+            color: #6f849a;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        /* 提示 / 说明条 */
+        .note-area {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.8rem;
+            border: 1px solid #e6eaef;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            margin-bottom: 2.2rem;
+        }
+
+        .note-area h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1a2634;
+            margin-bottom: 0.8rem;
+        }
+
+        .note-area p {
+            font-size: 0.95rem;
+            color: #3f4e5e;
+            margin-bottom: 0.7rem;
+        }
+
+        .note-area .highlight-text {
+            background: #f0f3f7;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-weight: 500;
+            color: #1d2a36;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 0.3rem;
+        }
+
+        .faq-item {
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #e4e9ef;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #1f2e3c;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .faq-a {
+            font-size: 0.93rem;
+            color: #506072;
+        }
+
+        /* 底部 */
+        .footer-note {
+            text-align: center;
+            padding: 1.6rem 0.5rem 0.5rem;
+            border-top: 1px solid #dce1e8;
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            color: #607486;
+        }
+
+        .footer-note a {
+            color: #2c3e50;
+            text-decoration: none;
+            border-bottom: 1px solid #bcc7d2;
+            transition: border-color 0.2s;
+        }
+
+        .footer-note a:hover {
+            border-bottom-color: #2c3e50;
+        }
+
+        .inline-link {
+            color: #2c3e50;
+            text-decoration: none;
+            border-bottom: 1px solid #b0bdcb;
+            transition: border-color 0.2s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #1f2e3c;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero -->
+    <div class="hero">
+        <h1>雷火电竞 · 产品说明</h1>
+        <div class="sub">
+            从日常体验到专注玩法，我们一直围绕「产品」本身打磨细节。
+            这里没有夸张的承诺，只有对内容和服务的持续优化。
+        </div>
+    </div>
+
+    <!-- 卡片网格：摘要 + 亮点 -->
+    <div class="card-grid">
+        <div class="card">
+            <h2>摘要</h2>
+            <p><a href="https://root-leihuoesports.com" class="inline-link">雷火电竞</a> 是一个面向电竞爱好者的内容与服务聚合平台。我们尝试在信息呈现、交互逻辑和视觉风格上保持克制，让使用者能更快聚焦自己关心的部分。</p>
+            <p>产品设计围绕三个关键词展开：清晰、轻量、可靠。不堆砌功能，不制造焦虑，也不盲目跟风。我们希望每一次访问都能获得顺畅、不被打扰的体验。</p>
+        </div>
+        <div class="card">
+            <h2>亮点</h2>
+            <ul class="feature-list">
+                <li>界面布局以信息层级优先，减少视觉噪音，关键内容一目了然。</li>
+                <li>响应式设计覆盖常用设备，移动端与桌面端保持一致的浏览感受。</li>
+                <li>内容更新节奏稳定，不盲目追求时效，更注重实用性和准确性。</li>
+                <li>无弹窗、无诱导浮层，用户注意力不会被无关元素打断。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 使用建议 + 场景 组合卡片区 -->
+    <div class="card-grid">
+        <div class="card">
+            <h2>使用建议</h2>
+            <p>如果你正在寻找一个不嘈杂、不浮夸的电竞内容入口，可以尝试将 <a href="https://root-leihuoesports.com" class="inline-link">雷火电竞</a> 加入日常浏览列表。我们推荐从「赛事动态」或「专题汇总」开始，这两个板块的内容组织相对成熟，信息密度适中。</p>
+            <p>对于有特定需求的用户，站内检索功能支持关键词过滤，能帮你快速定位往期内容。另外，页面内的导航结构比较扁平，通常两到三次点击就能达到目标页面。</p>
+        </div>
+        <div class="card">
+            <h2>适用场景</h2>
+            <p>午休时快速浏览当天比赛结果与赛程；下班后安静地回顾一场焦点战的分析复盘；或者周末想了解某个选手或战队近期的动态——这些使用场景都挺自然。</p>
+            <p>不需要额外注册或下载，打开浏览器就能用。整体节奏偏慢，适合希望“看了就走”或者“慢慢看”两种状态。</p>
+        </div>
+    </div>
+
+    <!-- 可信但克制的访问说明 + FAQ 摘要 -->
+    <div class="note-area">
+        <h3>关于访问与内容</h3>
+        <p><span class="highlight-text">雷火电竞</span> 目前由团队自主运营，所有公开内容均经过基础审核与整理。我们不使用算法推荐来延长用户停留时长，也不采集个人浏览行为用于商业推送。页面中可能会包含第三方平台的引用链接，但会明确标注来源。</p>
+        <p>网站采用标准 HTTPS 协议，数据传输经过加密。日常维护中，我们会定期检查外链与资源有效性，尽量保证访问稳定性。如果你在使用过程中遇到问题，可以通过站点内的反馈入口与我们取得联系（反馈入口位于页面底部）。</p>
+
+        <h3 style="margin-top: 1.5rem; font-size: 1.05rem; font-weight: 500;">常见疑问摘要</h3>
+        <div class="faq-mini">
+            <div class="faq-item">
+                <div class="faq-q">是否需要注册账号才能浏览内容？</div>
+                <div class="faq-a">不需要。绝大部分内容对访客开放，无需登录即可阅读。只有少数互动功能（如评论、收藏）需要创建账号，但目前这些功能尚未上线。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">内容更新频率大概是怎样的？</div>
+                <div class="faq-a">常规情况下，工作日每天会有 1–2 篇内容更新，周末及节假日更新较少。重大赛事期间会适当增加频率，但不会为了数量牺牲质量。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">页面上的外部链接是否可靠？</div>
+                <div class="faq-a">我们会筛选外部链接的来源，优先选择官方或行业认可度较高的站点。但鉴于外部网站内容可能变化，建议你自行判断信息时效。</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 再次自然嵌入链接的说明 -->
+    <div style="background: #ffffff; border-radius: 24px; padding: 1.5rem 1.8rem; border: 1px solid #e6eaef; box-shadow: 0 2px 6px rgba(0,0,0,0.02); margin-bottom: 2rem;">
+        <p style="font-size: 0.95rem; color: #3f4e5e;">
+            如果你还没浏览过 <a href="https://root-leihuoesports.com" class="inline-link">雷火电竞</a>，不妨找个空闲时间去看一眼。界面风格和内容调性可能和你预想的不太一样——没有花哨的动效，也没有紧迫的倒计时。整体氛围比较安静，适合认认真真看点东西。
+        </p>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        <p>产品说明页面 · 信息截至2025年4月 · 内容保持克制与真实</p>
+        <p style="margin-top: 0.4rem;">主站：<a href="https://root-leihuoesports.com">雷火电竞</a> ← 直接链接，无跟踪参数</p>
+    </div>
+</div>
+</body>
+</html>
